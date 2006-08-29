@@ -115,7 +115,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_sysconfdir}/gconf/schemas/slab.schemas
 %{_sysconfdir}/gconf/schemas/control-center.schemas
 %{_sysconfdir}/gconf/schemas/application-browser.schemas
-%{_libexecdir}/main-menu
+%attr(755,root,root) %{_libexecdir}/main-menu
 %attr(755,root,root) %{_bindir}/application-browser
 %attr(755,root,root) %{_bindir}/control-center
 %{_libdir}/bonobo/servers/GNOME_MainMenu.server
