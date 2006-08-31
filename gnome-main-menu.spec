@@ -24,6 +24,7 @@ BuildRequires:	perl-XML-Parser
 BuildRequires:	python-devel
 BuildRequires:	python-pygtk-gtk
 BuildRequires:	scrollkeeper
+BuildRequires:	fam-devel
 Requires(pre):	filesystem
 Requires(pre):	GConf2
 Requires:	dbus-glib
