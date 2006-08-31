@@ -9,6 +9,7 @@ Source0:	%{name}-%{version}.tar.gz
 URL:		http://www.gnome.org
 BuildRequires:	NetworkManager-devel
 BuildRequires:	avahi-devel
+BuildRequires:	fam-devel
 BuildRequires:	gnome-common
 BuildRequires:	gnome-desktop-devel
 BuildRequires:	gnome-menus-devel
@@ -24,7 +25,6 @@ BuildRequires:	perl-XML-Parser
 BuildRequires:	python-devel
 BuildRequires:	python-pygtk-gtk
 BuildRequires:	scrollkeeper
-BuildRequires:	fam-devel
 Requires(pre):	filesystem
 Requires(pre):	GConf2
 Requires:	dbus-glib
