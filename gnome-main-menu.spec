@@ -1,4 +1,5 @@
 Summary:	The GNOME Desktop Menu
+Summary(pl):	Menu dla ¶rodowiska GNOME
 Name:		gnome-main-menu
 Version:	0.6.2
 Release:	0.1
@@ -6,10 +7,13 @@ License:	GPL
 Group:		X11/Applications
 Source0:	%{name}-%{version}.tar.gz
 # Source0-md5:	e0931ef4cee4f703bd078d59b9f32d40
-URL:		http://www.gnome.org
+URL:		http://www.gnome.org/
 BuildRequires:	NetworkManager-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	avahi-devel
 BuildRequires:	fam-devel
+BuildRequires:	gettext-devel
 BuildRequires:	gnome-common
 BuildRequires:	gnome-desktop-devel
 BuildRequires:	gnome-menus-devel
@@ -18,15 +22,17 @@ BuildRequires:	gnutls-devel
 BuildRequires:	intltool
 BuildRequires:	libgnomeprintui-devel
 BuildRequires:	libgtop-devel
-BuildRequires:	libidn
+BuildRequires:	libidn-devel
 BuildRequires:	librsvg-devel
+BuildRequires:	libtool
 BuildRequires:	libwnck-devel
 BuildRequires:	perl-XML-Parser
 BuildRequires:	python-devel
 BuildRequires:	python-pygtk-gtk
 BuildRequires:	scrollkeeper
-Requires(pre):	filesystem
-Requires(pre):	GConf2
+Requires(post,postun):	/sbin/ldconfig
+Requires(post,postun):	/usr/bin/scrollkeeper
+Requires(post,preun):	GConf2
 Requires:	dbus-glib
 Requires:	hal
 Requires:	gnome-panel
@@ -34,20 +40,19 @@ Requires:	gnome-system-monitor
 Requires:	gnome-terminal
 Requires:	tango-icon-theme
 Requires:	wireless-tools
-
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The GNOME Desktop Menu and Application Browser.
 
-Authors:
-Scott Reeves <sreeves@novell.com>
-Jimmy Krehl <jimmyk@novell.com>
+%description -l pl
+Menu i przegl±darka aplikacji dla ¶rodowiska GNOME.
 
 %package devel
-Summary:	The GNOME Desktop Menu
+Summary:	Header files for GNOME Desktop Menu library
+Summary(pl):	Pliki nag³ówkowe biblioteki menu ¶rodowiska GNOME
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	gtk2+-devel
 Requires:	libgnomeui-devel
 Requires:	libbonoboui-devel
@@ -59,22 +64,17 @@ Requires:	glib2-devel
 Requires:	pango-devel
 
 %description devel
-The GNOME Desktop Menu and Application Browser.
+Header files for GNOME Desktop Menu library.
 
-Authors:
-Scott Reeves <sreeves@novell.com>
-Jimmy Krehl <jimmyk@novell.com>
+%description devel -l pl
+Pliki nag³ówkowe biblioteki menu ¶rodowiska GNOME.
 
 %prep
 %setup -q
 
 %build
 autoreconf -f -i
-./configure \
-  --prefix=%{_prefix} \
-  --libdir=%{_libdir} \
-  --libexecdir=%{_libexecdir} \
-  --sysconfdir=%{_sysconfdir}
+%configure
 %{__make}
 
 %install
@@ -116,11 +116,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_sysconfdir}/gconf/schemas/slab.schemas
 %{_sysconfdir}/gconf/schemas/control-center.schemas
 %{_sysconfdir}/gconf/schemas/application-browser.schemas
-%attr(755,root,root) %{_libexecdir}/main-menu
 %attr(755,root,root) %{_bindir}/application-browser
 %attr(755,root,root) %{_bindir}/control-center
+%attr(755,root,root) %{_libexecdir}/main-menu
+%attr(755,root,root) %{_libdir}/*.so.*.*.*
 %{_libdir}/bonobo/servers/GNOME_MainMenu.server
-%attr(755,root,root) %{_libdir}/*.so.*
 %{_desktopdir}/application-browser.desktop
 %{_desktopdir}/control-center.desktop
 %{_desktopdir}/main-menu-rug.desktop
@@ -129,7 +129,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%{_pkgconfigdir}/*.pc
-%{_libdir}/*.*a
-%{_libdir}/*.so
+%attr(755,root,root) %{_libdir}/*.so
+%{_libdir}/*.la
 %{_includedir}/slab
+%{_pkgconfigdir}/*.pc
+
+# static? (if exists)
+#%{_libdir}/*.a
