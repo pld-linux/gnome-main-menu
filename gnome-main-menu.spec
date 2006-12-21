@@ -31,7 +31,7 @@ BuildRequires:	python-devel
 BuildRequires:	python-pygtk-gtk
 BuildRequires:	scrollkeeper
 Requires(post,postun):	/sbin/ldconfig
-Requires(post,postun):	/usr/bin/scrollkeeper
+Requires(post,postun):	scrollkeeper
 Requires(post,preun):	GConf2
 Requires:	dbus-glib
 Requires:	hal
