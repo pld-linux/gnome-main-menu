@@ -1,12 +1,12 @@
 Summary:	The GNOME Desktop Menu
 Summary(pl):	Menu dla ¶rodowiska GNOME
 Name:		gnome-main-menu
-Version:	0.6.2
-Release:	0.1
+Version:	0.6.3
+Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	%{name}-%{version}.tar.gz
-# Source0-md5:	e0931ef4cee4f703bd078d59b9f32d40
+Source0:	http://jimmyk.org/gnome-main-menu/%{name}-%{version}.tar.gz
+# Source0-md5:	288103142e8dec1cbf64780357913f22
 URL:		http://www.gnome.org/
 BuildRequires:	NetworkManager-devel
 BuildRequires:	autoconf
