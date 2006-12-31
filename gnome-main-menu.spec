@@ -19,10 +19,12 @@ BuildRequires:	gnome-desktop-devel
 BuildRequires:	gnome-menus-devel
 BuildRequires:	gnome-panel-devel
 BuildRequires:	gnutls-devel
+BuildRequires:	hal-devel
 BuildRequires:	intltool
 BuildRequires:	libgnomeprintui-devel
 BuildRequires:	libgtop-devel
 BuildRequires:	libidn-devel
+BuildRequires:	libiw-devel
 BuildRequires:	librsvg-devel
 BuildRequires:	libtool
 BuildRequires:	libwnck-devel
