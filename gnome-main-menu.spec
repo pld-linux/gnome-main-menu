@@ -55,7 +55,7 @@ Summary:	Header files for GNOME Desktop Menu library
 Summary(pl):	Pliki nag³ówkowe biblioteki menu ¶rodowiska GNOME
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	gtk2+-devel
+Requires:	gtk+2-devel
 Requires:	libgnomeui-devel
 Requires:	libbonoboui-devel
 Requires:	libglade2-devel
