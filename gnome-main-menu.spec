@@ -1,5 +1,5 @@
 Summary:	The GNOME Desktop Menu
-Summary(pl):	Menu dla ∂rodowiska GNOME
+Summary(pl.UTF-8):   Menu dla ≈õrodowiska GNOME
 Name:		gnome-main-menu
 Version:	0.6.3
 Release:	1
@@ -47,12 +47,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 The GNOME Desktop Menu and Application Browser.
 
-%description -l pl
-Menu i przegl±darka aplikacji dla ∂rodowiska GNOME.
+%description -l pl.UTF-8
+Menu i przeglƒÖdarka aplikacji dla ≈õrodowiska GNOME.
 
 %package devel
 Summary:	Header files for GNOME Desktop Menu library
-Summary(pl):	Pliki nag≥Ûwkowe biblioteki menu ∂rodowiska GNOME
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe biblioteki menu ≈õrodowiska GNOME
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtk+2-devel
@@ -68,8 +68,8 @@ Requires:	pango-devel
 %description devel
 Header files for GNOME Desktop Menu library.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe biblioteki menu ∂rodowiska GNOME.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe biblioteki menu ≈õrodowiska GNOME.
 
 %prep
 %setup -q
