@@ -1,5 +1,5 @@
 Summary:	The GNOME Desktop Menu
-Summary(pl.UTF-8):   Menu dla środowiska GNOME
+Summary(pl.UTF-8):	Menu dla środowiska GNOME
 Name:		gnome-main-menu
 Version:	0.6.3
 Release:	1
@@ -52,7 +52,7 @@ Menu i przeglądarka aplikacji dla środowiska GNOME.
 
 %package devel
 Summary:	Header files for GNOME Desktop Menu library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki menu środowiska GNOME
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki menu środowiska GNOME
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtk+2-devel
