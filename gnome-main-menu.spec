@@ -1,13 +1,12 @@
-%define		_snap	201
 Summary:	The GNOME Desktop Menu
 Summary(pl.UTF-8):	Menu dla środowiska GNOME
 Name:		gnome-main-menu
-Version:	0.9.5.snap%{_snap}
+Version:	0.9.8
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	%{name}-%{_snap}.tar.gz
-# Source0-md5:	ae3a21834f78a576dc841d1dd0b59da2
+Source0:	%{name}-%{version}.tar.gz
+# Source0-md5:	c0fa6d984cd8e8f1c7a30c4db9c36114
 URL:		http://www.gnome.org/
 BuildRequires:	NetworkManager-devel
 BuildRequires:	autoconf
@@ -73,7 +72,7 @@ Header files for GNOME Desktop Menu library.
 Pliki nagłówkowe biblioteki menu środowiska GNOME.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 
 %build
 %{__intltoolize}
@@ -132,6 +131,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/application-browser.desktop
 %{_desktopdir}/control-center.desktop
 %{_desktopdir}/gnome-screensaver-lock.desktop
+%{_desktopdir}/gnome-session-kill.desktop
 %{_datadir}/gnome-main-menu
 %{_datadir}/gnome-2.0/ui/GNOME_MainMenu_ContextMenu.xml
 %{_datadir}/gnome/autostart/application-browser.desktop
