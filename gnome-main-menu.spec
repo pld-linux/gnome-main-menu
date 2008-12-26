@@ -1,7 +1,7 @@
 Summary:	The GNOME Desktop Menu
 Summary(pl.UTF-8):	Menu dla środowiska GNOME
 Name:		gnome-main-menu
-Version:	0.9.10
+Version:	0.9.8
 Release:	1
 License:	GPL
 Group:		X11/Applications
