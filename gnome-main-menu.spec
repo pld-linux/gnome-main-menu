@@ -1,13 +1,13 @@
 Summary:	The GNOME Desktop Menu
 Summary(pl.UTF-8):	Menu dla środowiska GNOME
 Name:		gnome-main-menu
-Version:	0.9.8
-Release:	1
+Version:	0.9.16
+Release:	0.1
 License:	GPL
 Group:		X11/Applications
-Source0:	%{name}-%{version}.tar.gz
-# Source0-md5:	c0fa6d984cd8e8f1c7a30c4db9c36114
-URL:		http://www.gnome.org/
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-main-menu/0.9/%{name}-%{version}.tar.bz2
+# Source0-md5:	c52c95536dadd64d08d566f8aafc2da2
+URL:		http://en.opensuse.org/GNOME_Main_Menu
 BuildRequires:	NetworkManager-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -27,7 +27,7 @@ BuildRequires:	libidn-devel
 BuildRequires:	libiw-devel
 BuildRequires:	librsvg-devel
 BuildRequires:	libtool
-BuildRequires:	libwnck-devel
+BuildRequires:	libwnck2-devel
 BuildRequires:	perl-XML-Parser
 BuildRequires:	python-devel
 BuildRequires:	python-pygtk-gtk
@@ -36,16 +36,21 @@ Requires(post,postun):	/sbin/ldconfig
 Requires(post,postun):	scrollkeeper
 Requires(post,preun):	GConf2
 Requires:	dbus-glib
-Requires:	hal
 Requires:	gnome-panel
 Requires:	gnome-system-monitor
 Requires:	gnome-terminal
+Requires:	hal
 Requires:	tango-icon-theme
 Requires:	wireless-tools
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The GNOME Desktop Menu and Application Browser.
+GNOME Main Menu is a convenient menu accessible from a button in the
+desktop panel. It is different from conventional menus, in that it
+lists a user's favourite and recent Applications, Documents and Places
+in one useful interface. Additionally it provides a search bar that
+allows a user to search for applications and documents from the menu
+itself.
 
 %description -l pl.UTF-8
 Menu i przeglądarka aplikacji dla środowiska GNOME.
@@ -55,14 +60,14 @@ Summary:	Header files for GNOME Desktop Menu library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki menu środowiska GNOME
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	gtk+2-devel
-Requires:	libgnomeui-devel
-Requires:	libbonoboui-devel
-Requires:	libglade2-devel
-Requires:	librsvg-devel
+Requires:	glib2-devel
 Requires:	gnome-desktop-devel
 Requires:	gnome-menus-devel
-Requires:	glib2-devel
+Requires:	gtk+2-devel
+Requires:	libbonoboui-devel
+Requires:	libglade2-devel
+Requires:	libgnomeui-devel
+Requires:	librsvg-devel
 Requires:	pango-devel
 
 %description devel
