@@ -20,6 +20,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel >= 1:2.16.0
+BuildRequires:	gnome-common
 BuildRequires:	gtk+2-devel >= 2:2.18
 BuildRequires:	gtk-doc-automake
 BuildRequires:	intltool
