@@ -1,3 +1,6 @@
+# TODO
+# - lock screen fails (but mate own lock screen launches xscreensaver okay)
+#   ** (main-menu:9293): WARNING **: error launching file:///usr/share/applications/mate-screensaver-lock.desktop [Fai
 Summary:	The GNOME Desktop Menu
 Summary(pl.UTF-8):	Menu dla środowiska GNOME
 Name:		gnome-main-menu
@@ -15,30 +18,21 @@ URL:		http://en.opensuse.org/GNOME_Main_Menu
 BuildRequires:	NetworkManager-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	avahi-devel
-BuildRequires:	fam-devel
 BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel >= 1:2.16.0
-#BuildRequires:	gnome-common
-#BuildRequires:	gnome-menus-devel
-BuildRequires:	gnutls-devel
 BuildRequires:	gtk+2-devel >= 2:2.18
-#BuildRequires:	hal-devel
+BuildRequires:	gtk-doc-automake
 BuildRequires:	intltool
 BuildRequires:	libgtop-devel
-BuildRequires:	libidn-devel
 BuildRequires:	libiw-devel
 BuildRequires:	librsvg-devel
 BuildRequires:	libtool
 BuildRequires:	libunique-devel
-BuildRequires:	libwnck2-devel
-BuildRequires:	mate-control-center-devel
 BuildRequires:	mate-control-center-devel >= 1.5.2
 BuildRequires:	mate-desktop-devel
+BuildRequires:	mate-panel-devel
 BuildRequires:	perl-XML-Parser
-BuildRequires:	python-devel
-BuildRequires:	python-pygtk-gtk
-BuildRequires:	scrollkeeper
+BuildRequires:	pkgconfig
 #Requires:	dbus-glib
 Requires:	glib2 >= 1:2.26.0
 #Requires:	gnome-panel
