@@ -42,7 +42,7 @@ BuildRequires:	scrollkeeper
 #Requires:	dbus-glib
 Requires:	glib2 >= 1:2.26.0
 #Requires:	gnome-panel
-#Requires:	gnome-system-monitor
+Requires:	mate-system-monitor
 #Requires:	gnome-terminal
 #Requires:	hal
 #Requires:	tango-icon-theme
