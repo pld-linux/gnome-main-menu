@@ -18,7 +18,7 @@ URL:		http://en.opensuse.org/GNOME_Main_Menu
 BuildRequires:	NetworkManager-devel >= 0.8.0
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.9
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	cairo-devel
 %{?with_caja:BuildRequires:	caja-devel >= 1.5.0}
 BuildRequires:	glib2-devel >= 1:2.26.0
